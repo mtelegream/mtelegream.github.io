@@ -1,20 +1,11 @@
-var connection = new ActiveXObject("ADODB.Connection") ;
+<?php 
+$x = "Hello world!";
+$y = 'Hello world!';
 
-var connectionstring="Data Source=94.130.67.142:3306;Initial Catalog=onepushe_mttelegram;User ID=onepushe_mttelegram;Password=88363791;Provider=SQLOLEDB";
-
-connection.Open(connectionstring);
-var rs = new ActiveXObject("ADODB.Recordset");
-
-rs.Open("SELECT * FROM 	tb_server", connection);
-rs.MoveFirst
-while(!rs.eof)
-{
-   document.write(rs.fields(1));
-   rs.movenext;
-}
-
-rs.close;
-connection.close; 
+echo $x;
+echo "<br>"; 
+echo $y;
+?>
   
 {
   "data": [
